@@ -57,11 +57,6 @@ To run this project, you need to have the following software installed on your m
    - Create a new PostgreSQL database named `lightbnb`.
    - Update the database connection configuration in the `db/database.js` file.
 
-5. Run the database migrations:
-
-
-   npm run db:migrate
-
 
 ### Running the Server
 
