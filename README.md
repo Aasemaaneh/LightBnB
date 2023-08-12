@@ -1,6 +1,4 @@
-Certainly! Here's the entire README content in a single file:
 
-```markdown
 # LightBnB
 
 LightBnB is a property rental and reservation platform where users can list properties, search for available properties, make reservations, and manage their own property listings.
