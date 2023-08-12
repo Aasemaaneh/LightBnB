@@ -4,8 +4,16 @@ const database = require("../db/database");
 const router = express.Router();
 
 router.get("/properties", (req, res) => {
+  const filterOptions = {
+    city: req.query.city || undefined,
+    owner_id: req.query.owner_id || undefined,
+    minimum_price_per_night: req.query.minimum_price_per_night || undefined,
+    maximum_price_per_night: req.query.maximum_price_per_night || undefined,
+    minimum_rating: req.query.minimum_rating || undefined
+  };
+
   database
-    .getAllProperties(req.query, 20)
+    .getAllProperties(filterOptions, 20) // You can adjust the limit as needed
     .then((properties) => res.send({ properties }))
     .catch((e) => {
       console.error(e);
